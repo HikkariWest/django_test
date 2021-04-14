@@ -13,3 +13,9 @@ class Post(modes.Model):
 	content = models.TextField(blank = True)
 	category = models.SmallIntegerField(choices = CATEGORIES, default = 0)
 	draft = models.BooleanField(default = True)
+
+	class Meta:
+		ordering = ('id', 'draft')
+
+	def __str__(self):
+		return self.title

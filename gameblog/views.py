@@ -5,9 +5,9 @@ from django.db.models import Q
 
 # Create your views here.
 def post_details(request, slug):
-	post = Post.objects.get(slug = slug)
-	context = {'post':post}
-	return render(request, 'gameblog/post_details.html', context)
+    post = Post.objects.get(slug=slug)
+    context = {'post': post}
+    return render(request, 'gameblog/post_details.html', context)
 
 
 '''
@@ -25,8 +25,8 @@ search = request.GET.get('search','')
 				'search':search}
 '''
 
-def create_post(request):
-	form = PostForm(request.POST or None)
-	if form.is_valid():
-		form.save()
-	context = {'form':form}
+# def create_post(request):
+# 	form = PostForm(request.POST or None)
+# 	if form.is_valid():
+# 		form.save()
+# 	context = {'form':form}

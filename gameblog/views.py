@@ -14,7 +14,7 @@ def post_list(request):
 	post = Post.objects.all().filter(default = True)
 	context = {'post':post}
 	return render(request, 'gameblog/post_list.html', context)
-	
+
 
 
 '''
@@ -31,4 +31,3 @@ search = request.GET.get('search','')
 	context = {'todos':todos,
 				'search':search}
 '''
-

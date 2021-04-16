@@ -9,12 +9,14 @@ def post_details(request, slug):
     context = {'post': post}
     return render(request, 'gameblog/post_details.html', context)
 
+
 def post_list(request):
-    posts = Post.objects.all().filter(publish=False)
+    posts = Post.objects.all().filter(publish=True)
     context = {
         'posts': posts
     }
     return render(request, 'gameblog/post_list.html', context)
+
 
 '''
 search = request.GET.get('search','')
@@ -31,10 +33,8 @@ search = request.GET.get('search','')
 				'search':search}
 '''
 
-
 # def create_post(request):
 # 	form = PostForm(request.POST or None)
 # 	if form.is_valid():
 # 		form.save()
 # 	context = {'form':form}
-

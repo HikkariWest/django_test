@@ -25,8 +25,10 @@ search = request.GET.get('search','')
 				'search':search}
 '''
 
+
 # def create_post(request):
 # 	form = PostForm(request.POST or None)
 # 	if form.is_valid():
 # 		form.save()
 # 	context = {'form':form}
+

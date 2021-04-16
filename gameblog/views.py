@@ -9,6 +9,12 @@ def post_details(request, slug):
     context = {'post': post}
     return render(request, 'gameblog/post_details.html', context)
 
+def post_list(request):
+    posts = Post.objects.all().filter(publish=False)
+    context = {
+        'posts': posts
+    }
+    return render(request, 'gameblog/post_list.html', context)
 
 '''
 search = request.GET.get('search','')

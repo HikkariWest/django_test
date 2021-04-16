@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Все посты{% endblock %}
+{% block content %}
+{% for post in posts %}
+<div class="item row">
+    <a class="col-md-4 col-sm-4 col-xs-12"
+       href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-mobile-apps-atom/"
+       target="_blank">
+        <img class="img-responsive project-image" src="../static/images/projects/project-5.png" alt="project name"/>
+    </a>
+    <div class="desc col-md-8 col-sm-8 col-xs-12">
+        <h3 class="title">{{ post.title }}</h3>
+        <p>{{ post.content }}</p>
+        <p><a class="more-link"
+              href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-mobile-apps-atom/"
+              target="_blank"><i class="fa fa-external-link"></i> Find out more</a></p>
+    </div><!--//desc-->
+</div><!--//item-->
+{% endfor %}
+{% endblock %}

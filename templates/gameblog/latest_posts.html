@@ -1,7 +1,13 @@
-<ul>
+<div class="list-group">
     {% for post in latest_posts %}
-    <li>
-        {{ post.title }}
-    </li>
+
+        <a href="news/{{ post.slug }}" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{ post.title }}</h5>
+                <small class="text-muted">{{ post.get_category_display }}</small>
+            </div>
+            <p class="mb-1">{{ post.content|truncatewords:14 }}</p>
+            {#        <small class="text-muted">And some muted small print.</small>#}
+        </a>
     {% endfor %}
-</ul>
+</div>

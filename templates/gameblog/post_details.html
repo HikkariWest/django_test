@@ -1,0 +1,23 @@
+{% load static %}
+{% extends "base.html" %}
+{% block content%}
+               <section class="latest section">
+                    <div class="section-inner">
+                        <h2 class="heading">Latest Projects</h2>
+                        <div class="content">
+
+                            <div class="item featured text-center">
+                                <h3 class="title"><a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-products-velocity/" target="_blank">{{post.title}}</a></h3>
+                                <p class="summary">{{post.get_category_display}}</p>
+
+
+                                <div class="desc text-left">
+                                    <p>{{post.content}}</p>
+                                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
+                                </div><!--//desc-->
+                                <a class="btn btn-cta-secondary" href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-products-velocity/" target="_blank"><i class="fa fa-thumbs-o-up"></i> Back my project</a>
+                            </div><!--//item-->
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </section><!--//section-->
+{% endblock %}

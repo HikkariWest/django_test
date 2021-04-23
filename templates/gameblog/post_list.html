@@ -70,7 +70,10 @@
                  alt="project name"/>
         </a>
         <div class="desc col-md-8 col-sm-8 col-xs-12">
-            <h3 class="title">{{ post.title }}</h3>
+            <a href="{% url 'post_details' %}">
+               <h3 class="title">{{ post.title }}</h3>
+            </a>
+
             <p>{{ post.content|truncatewords:16 }}</p>
             <p><a class="more-link"
                   href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-mobile-apps-atom/"

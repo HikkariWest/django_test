@@ -543,3 +543,6 @@ iframe {
     width: 1360px;
   }
 }
+.dropdown-menu {
+  font-size: 1.5rem;
+}
